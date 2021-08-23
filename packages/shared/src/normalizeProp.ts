@@ -24,6 +24,8 @@ export function normalizeStyle(
     return value
   } else if (isObject(value)) {
     return value
+  } else if (value === null || typeof value === 'undefined') {
+    return {}
   }
 }
 
